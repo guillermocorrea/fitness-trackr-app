@@ -1,6 +1,10 @@
-# FitnessTrackerApp
+# [FitnessTrackerApp](https://fitness-tracker-app-e683a.firebaseapp.com/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
+
+## Firebase setup
+
+Update files `src/environments/environment.ts` and `src/environments/environment.prod.ts` with your firebase credentials.
 
 ## Development server
 

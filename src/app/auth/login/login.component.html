@@ -1,0 +1,40 @@
+<section class="signup-form">
+    <h2>Login form</h2>
+    <form
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutGap="10px"
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+    >
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Email"
+          type="email"
+          formControlName="email"
+        />
+        <mat-error>Email is invalid.</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Your password"
+          type="password"
+          formControlName="password"
+        />
+        <mat-error>Pasword is required.</mat-error>
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="form.invalid"
+        *ngIf="(isLoading$ | async) === false"
+      >
+        Login
+      </button>
+      <mat-spinner *ngIf="(isLoading$ | async) === true"></mat-spinner>
+    </form>
+  </section>
